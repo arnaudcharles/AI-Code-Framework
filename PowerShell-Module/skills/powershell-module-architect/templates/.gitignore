@@ -1,0 +1,9 @@
+output/
+artifacts/
+*.log
+TestResults/
+coverage.xml
+.vscode/
+bin/
+obj/
+*.user

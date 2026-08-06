@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: gallery-publish # protected environment with required reviewers
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build, analyze, test, package
+        shell: pwsh
+        run: ./build.ps1 -Task All
+
+      - name: Publish to PowerShell Gallery
+        shell: pwsh
+        env:
+          GALLERY_API_KEY: ${{ secrets.GALLERY_API_KEY }}
+        run: |
+          if (-not $env:GALLERY_API_KEY) {
+            throw 'GALLERY_API_KEY is not configured. Publish is intentionally disabled until it is.'
+          }
+          # Publish-PSResource -Path ./output/ModuleName/<version> -ApiKey $env:GALLERY_API_KEY -Repository PSGallery
