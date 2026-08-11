@@ -1,0 +1,36 @@
+services:
+  app:
+    image: ghcr.io/example-org/example-app:0.1.0
+    networks:
+      - edge
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+        mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        delay: 5s
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.platform.os == linux
+    healthcheck:
+      test: ["CMD", "/bin/sh", "-c", "test -x /app/run.sh"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+networks:
+  edge:
+    driver: overlay

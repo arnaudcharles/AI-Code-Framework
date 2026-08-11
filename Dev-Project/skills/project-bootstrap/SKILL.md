@@ -72,7 +72,9 @@ Conditional-creation rule (topic files): create an individual topic file (e.g. `
 
 ## Context switching
 - Say `READY` on its own line when the base is complete and stable enough to continue in a fresh conversation.
-- Say `NEWCHAT` on its own line when the current conversation is too dense, repetitive, or risky to continue. Prefer it early, not after quality degrades.
+- Say `NEWCHAT` on its own line when the current conversation is too dense, repetitive, or risky to continue.
+- Proactively recommend `NEWCHAT` around the point where the thread is starting to become inefficient, roughly when the context window reaches about 60% or the repeated context makes progress slower than a fresh chat.
+- Prefer `NEWCHAT` early, not after quality degrades.
 
 ## Bootstrap workflow
 1. Read the project idea.

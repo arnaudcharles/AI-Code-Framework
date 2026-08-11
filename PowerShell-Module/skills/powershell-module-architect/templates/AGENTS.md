@@ -22,3 +22,9 @@ If the skill is available to the agent, load it and its `reference/*.md` files f
 ## Documentation model
 - Always present: manifest, `README.md`, `CHANGELOG.md`, `SECURITY.md`, `CONTRIBUTING.md`, this file.
 - `docs/` and `examples/`: folder scaffolded with an index; individual files created only with real content.
+
+## Context switching
+- Say `READY` on its own line when the module base is complete and stable enough to continue in a fresh conversation.
+- Say `NEWCHAT` on its own line when the conversation should be restarted. Prefer it early.
+- Proactively recommend `NEWCHAT` around the point where the thread starts becoming inefficient, roughly when the context window reaches about 60% or the repeated context is slowing progress.
+- Use `/compact` before restarting when the remaining work can still fit in a shorter thread.

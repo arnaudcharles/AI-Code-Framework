@@ -41,6 +41,10 @@ See the compatibility matrix maintained alongside this module once real platform
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## CI and release
+
+Use `CI.md` to define the provider-agnostic pipeline contract, then `Generate-CI.md` to turn it into an executable CI implementation for the chosen provider.
+
 ## Support policy
 State the support window here once decided (e.g. current and previous major version).
 

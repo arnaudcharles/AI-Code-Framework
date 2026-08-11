@@ -53,6 +53,12 @@ This is the single source of truth. Agent-specific files (`CLAUDE.md`, `.github/
 - If a file is not created yet, list it in `PROJECT.md` under "next docs to create" with a one-line reason.
 - Each fact lives in exactly one file; other files reference it.
 
+## Context switching
+- Say `READY` on its own line when the base is complete and stable enough to continue in a fresh conversation.
+- Say `NEWCHAT` on its own line when the conversation should be restarted. Prefer it early.
+- Proactively recommend `NEWCHAT` around the point where the thread starts becoming inefficient, roughly when the context window reaches about 60% or the repeated context makes progress slower than a fresh chat.
+- Use `/compact` before restarting when the remaining work can still fit in a shorter thread.
+
 ## Authorship rule
 - Never credit the assistant as author, co-author, committer, or pusher. No `Co-authored-by`. No tool attribution in commits or metadata unless explicitly requested.
 

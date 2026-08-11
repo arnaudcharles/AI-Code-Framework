@@ -22,3 +22,9 @@ Technical and product reference documentation.
 
 ## /manuals
 User-facing usage docs, examples, commands, troubleshooting, and FAQs.
+
+## CI files
+
+When the project needs a CI contract, use:
+- `CI.md` for the provider-agnostic pipeline specification
+- `Generate-CI.md` for turning `CI.md` into an executable provider-specific pipeline

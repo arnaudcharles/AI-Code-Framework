@@ -1,42 +1,58 @@
 # Dev-Project
-Collection of prompt to work better with Claude on projects, avoiding high token cosumption.
 
-Claude will say **READY** when he know enough of the project, the base is build and you need to start a new chat.
+Generic bootstrap and resume base for software projects.
 
-When the context window is starting to be too wide, he will say **NEWCHAT** to propose you to reduce token cost. If you think you still have things to do or achieve try to **/compact** and continue the chat but then whne it's ok for you, open the new chat.
+## Overview
 
-## Project Documentation Map
+This base stays intentionally simple because it is meant to work across many project types. It gives Claude a lean operating contract, a living state file, and a small documentation model that keeps context switching safe.
 
-This repository uses a documentation structure designed for clarity, maintainability, and safe context switching.
+Claude will say `READY` when the base is complete enough to continue in a fresh conversation.
 
-### CLAUDE.md
-Contains stable project rules, working principles, architecture constraints, commands, and durable context that should remain valid across conversations.
+When the context window becomes too wide, Claude will say `NEWCHAT` to recommend a new conversation. If the work is still active, use `/compact` and continue; if the base is stable, start the new chat.
 
-### PROJECT.md
-Contains the living state of the project: current status, active decisions, tasks, blockers, open questions, and next steps.
+## Structure
 
-### SECURITY.md
-Contains security rules, secret-handling requirements, access constraints, safe development practices, and trust-boundary guidance.
+- `CLAUDE.md` - stable project rules, working principles, architecture constraints, commands, and durable context.
+- `PROJECT.md` - living state: status, decisions, tasks, blockers, open questions, next steps.
+- `SECURITY.md` - secret handling, trust boundaries, safe-development rules.
+- `CONTRIBUTING.md` - collaboration rules for contributors.
+- `/docs` - technical, functional, and product reference documentation.
+- `/manuals` - user-facing manuals, examples, commands, troubleshooting, and operational instructions.
 
-### CONTRIBUTING.md
-Contains collaboration rules for contributors: branching, commit messages, merge requests, naming conventions, review expectations, and onboarding guidance.
+## How to use it
 
-### /docs
-Contains structured technical, functional, and product documentation that explains the project in depth.
+- Read `CLAUDE.md` first for stable operating rules.
+- Read `PROJECT.md` for the current state of the work.
+- Read `SECURITY.md` before touching sensitive or security-related code.
+- Read `CONTRIBUTING.md` before proposing changes.
+- Read `/docs` when you need detailed reference material.
+- Read `/manuals` when you need usage instructions or examples.
 
-### /manuals
-Contains user-facing manuals, examples, commands, usage guides, troubleshooting notes, and operational instructions.
+## Token management
 
-### How to use this structure
-- Read CLAUDE.md first for stable operating rules.
-- Read PROJECT.md for the current state of the work.
-- Read SECURITY.md before touching sensitive or security-related code.
-- Read CONTRIBUTING.md before proposing changes.
-- Read /docs for detailed reference material.
-- Read /manuals for usage instructions and examples.
+Keep the context window small. Work in small iterations, use `/compact` when the conversation gets dense, and start a new chat when the current thread is no longer token-efficient.
 
-# Starting a new chat
+When the base is stable enough to continue elsewhere, Claude should say `READY`. When the thread becomes too wide or too repetitive, Claude should proactively say `NEWCHAT` and recommend restarting the conversation.
 
-Small change, link: CLAUDE.md
-Usual work, link: CLAUDE.md + PROJECT.md
-Structual work, link: CLAUDE.md + PROJECT.md + /manuals + /docs + SECURITY.md
+## Invocation
+
+Use the project-bootstrap skill to start a new project or to restructure an existing one.
+
+- New project: provide the project idea and let the skill initialize the base.
+- Existing project: resume from the committed documentation and the current source tree.
+
+## CI and release
+
+If the project needs CI, the template includes the same portable pattern used by the other bases:
+- `CI.md` for the provider-agnostic pipeline specification
+- `Generate-CI.md` for turning `CI.md` into an executable provider-specific pipeline
+
+## Cross-agent model
+
+Use one canonical file plus thin pointers for each agent.
+
+- `AGENTS.md` - canonical source of truth
+- `CLAUDE.md` - Claude pointer to `AGENTS.md`
+- `.github/copilot-instructions.md` - Copilot pointer to `AGENTS.md`
+
+Each agent reads its own file, which redirects to `AGENTS.md`. No rule is duplicated.
