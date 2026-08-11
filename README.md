@@ -1,4 +1,4 @@
-# Claude Project Orchestrator
+# AI-Code-Framework
 
 This repository is a framework of reusable project bases for working with Claude and other coding agents without repeating a giant master prompt on every task.
 
