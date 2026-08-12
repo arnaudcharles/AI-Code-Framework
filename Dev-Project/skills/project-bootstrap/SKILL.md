@@ -41,6 +41,11 @@ The bootstrap and resume prompts are thin routers that defer to this file. Do no
 - Format for any recommendation: observed problem -> smallest verifiable action. No generic methodology lectures.
 - This is separate from bug fixing. For bugs: state the bug, show the fix, stop.
 
+## Placeholder policy
+- Placeholders are allowed in framework templates only.
+- Final deliverables for a real repository must not contain unresolved placeholders (`<...>` markers, sample URLs, sample names, fake identifiers).
+- If a required real value is unknown, record it in `PROJECT.md` as an explicit assumption or blocking finding.
+
 ## Documentation model
 Two files are mandatory and always carry the durable context, so nothing is lost long term:
 - `CLAUDE.md`: stable operating rules, stack, architecture constraints, stable commands, references to the other files.
