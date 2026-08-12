@@ -1,10 +1,10 @@
-# agent.md
+# AGENTS.md
 
 Canonical operating instructions for any AI coding agent in this Puppet repository.
 
 ## Reading order
 
-1. agent.md
+1. AGENTS.md
 2. PROJECT.md
 3. SECURITY.md
 4. CONTRIBUTING.md

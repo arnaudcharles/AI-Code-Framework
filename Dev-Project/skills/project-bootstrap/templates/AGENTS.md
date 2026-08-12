@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Canonical operating instructions for any AI coding agent in this repository.
-This is the single source of truth. Agent-specific files (`CLAUDE.md`, `.github/copilot-instructions.md`, etc.) point here and add only vendor-specific notes.
+This is the single source of truth. Agent-specific files (`CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`) point here and add only vendor-specific notes.
 
 ## Purpose
 - Build and maintain the project safely and efficiently.
@@ -53,9 +53,6 @@ This is the single source of truth. Agent-specific files (`CLAUDE.md`, `.github/
 - If a file is not created yet, list it in `PROJECT.md` under "next docs to create" with a one-line reason.
 - Each fact lives in exactly one file; other files reference it.
 
-## Context switching
-- Say `READY` on its own line when the base is complete and stable enough to continue in a fresh conversation.
-- Say `NEWCHAT` on its own line when the conversation should be restarted. Prefer it early.
 - Proactively recommend `NEWCHAT` around the point where the thread starts becoming inefficient, roughly when the context window reaches about 60% or the repeated context makes progress slower than a fresh chat.
 - Use `/compact` before restarting when the remaining work can still fit in a shorter thread.
 

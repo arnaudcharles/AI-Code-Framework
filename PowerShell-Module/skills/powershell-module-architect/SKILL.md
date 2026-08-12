@@ -76,7 +76,7 @@ Idiomatic, predictable, pipeline-compatible where meaningful, secure by default,
 ## Documentation model for the generated module
 Same principle as the `project-bootstrap` skill: thin pointer/index files are always created; content-heavy files are created only with real content.
 - Always: manifest, `README.md`, `CHANGELOG.md`, `SECURITY.md`, `CONTRIBUTING.md`, `AGENTS.md`.
-- Cross-agent pointers: `CLAUDE.md`, `.github/copilot-instructions.md` - both point to `AGENTS.md`, add only vendor-specific notes, never duplicate rules.
+- Cross-agent pointers: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md` - all point to `AGENTS.md`, add only vendor-specific notes, never duplicate rules.
 - `docs/` and `examples/`: scaffold the folder with a short index; write individual files only when they have real content.
 
 ## Final response format

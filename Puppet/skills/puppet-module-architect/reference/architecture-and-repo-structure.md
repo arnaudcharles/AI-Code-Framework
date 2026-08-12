@@ -53,7 +53,7 @@ Required additions:
 - spec/
 - CI.md
 - Generate-CI.md
-- agent.md plus pointer files
+- AGENTS.md plus pointer files
 - PROJECT.md, SECURITY.md, CONTRIBUTING.md
 - docs/ and manuals/
 

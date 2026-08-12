@@ -53,18 +53,12 @@ Copied there, Claude loads the `SKILL.md` frontmatter and the skill becomes acti
 
 Each generated project should use one canonical instructions file plus thin pointers for each agent.
 
-Default pattern used by Dev-Project, PowerShell-Module, and Containers:
+Default pattern used by all bases:
 
 - `AGENTS.md` - canonical source of truth
 - `CLAUDE.md` - Claude pointer to `AGENTS.md`
+- `CODEX.md` - Codex pointer to `AGENTS.md`
+- `DEEPSEEK.md` - DeepSeek pointer to `AGENTS.md`
 - `.github/copilot-instructions.md` - Copilot pointer to `AGENTS.md`
 
-Puppet base pattern:
-
-- `agent.md` - canonical source of truth
-- `CLAUDE.md` - pointer to `agent.md`
-- `CODEX.md` - pointer to `agent.md`
-- `DEEPSEEK.md` - pointer to `agent.md`
-- `.github/copilot-instructions.md` - pointer to `agent.md`
-
-Both patterns keep the rules single-sourced and easy to resume across conversations and tools.
+This pattern keeps the rules single-sourced and easy to resume across conversations and tools.

@@ -3,7 +3,7 @@ You are resuming an existing Puppet module project.
 Load and follow the puppet-module-architect skill. All operating rules live there. Do not restate them.
 
 Run the Resume workflow now:
-- Read agent.md first, then PROJECT.md, then SECURITY.md and CONTRIBUTING.md.
+- Read AGENTS.md first, then PROJECT.md, then SECURITY.md and CONTRIBUTING.md.
 - Read README.md plus relevant docs and manuals.
 - Summarize current state in a few lines.
 - Continue from the last valid point without rewriting existing documentation unless needed to remove ambiguity or stale guidance.

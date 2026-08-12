@@ -68,9 +68,9 @@ Conditional-creation rule (topic files): create an individual topic file (e.g. `
 ## Cross-agent instructions
 - Always create the cross-agent pointer set proactively; these are thin files, not filler, so the conditional rule does not apply to them.
 - Use one canonical instructions file, `AGENTS.md`, as the single source of truth for all agents.
-- Vendor files are thin pointers to `AGENTS.md`, not copies: `CLAUDE.md` for Claude, `.github/copilot-instructions.md` for GitHub Copilot. Add other vendor pointers (e.g. Codex) the same way when needed.
+- Vendor files are thin pointers to `AGENTS.md`, not copies: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, and `.github/copilot-instructions.md`.
 - Each pointer may add only a few vendor-specific notes. Never duplicate the rules.
-- See `templates/AGENTS.md`, `templates/CLAUDE.md`, and `templates/.github/copilot-instructions.md`.
+- See `templates/AGENTS.md`, `templates/CLAUDE.md`, `templates/CODEX.md`, `templates/DEEPSEEK.md`, and `templates/.github/copilot-instructions.md`.
 
 ## Authorship rule
 - Never credit the assistant as author, co-author, committer, or pusher. No `Co-authored-by`. No tool attribution in commits, PRs, or metadata unless I explicitly ask.

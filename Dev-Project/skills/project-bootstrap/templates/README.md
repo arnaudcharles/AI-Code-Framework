@@ -5,7 +5,7 @@ This repository uses a documentation structure designed for clarity, maintainabi
 ## AGENTS.md
 Canonical operating instructions for every AI agent. Single source of truth.
 
-## CLAUDE.md / .github/copilot-instructions.md
+## CLAUDE.md / CODEX.md / DEEPSEEK.md / .github/copilot-instructions.md
 Thin, vendor-specific pointers to `AGENTS.md`. They add only agent-specific notes, never duplicate the rules.
 
 ## PROJECT.md

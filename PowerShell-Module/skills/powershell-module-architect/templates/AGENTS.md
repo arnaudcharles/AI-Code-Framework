@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Canonical operating instructions for any AI coding agent working on this PowerShell module. Single source of truth - vendor-specific files (`CLAUDE.md`, `.github/copilot-instructions.md`) point here and add only vendor-specific notes.
+Canonical operating instructions for any AI coding agent working on this PowerShell module. Single source of truth - vendor-specific files (`CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`) point here and add only vendor-specific notes.
 
 ## Standard
 This module follows the `powershell-module-architect` skill: architecture profile, naming/versioning/manifest, command and API design, output/error/observability, security, authentication/client/config, compatibility/performance, documentation/testing, style/build/CI/release, and governance rules.

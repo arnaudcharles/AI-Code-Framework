@@ -88,6 +88,8 @@ Always create:
 
 Cross-agent pointers:
 - `CLAUDE.md` points to `AGENTS.md`
+- `CODEX.md` points to `AGENTS.md`
+- `DEEPSEEK.md` points to `AGENTS.md`
 - `.github/copilot-instructions.md` points to `AGENTS.md`
 
 Scaffold-only indexes (create always, fill topic files only with real content):

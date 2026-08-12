@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Canonical operating instructions for any AI coding agent in this container project. This is the single source of truth. Vendor-specific files (`CLAUDE.md`, `.github/copilot-instructions.md`) point here.
+Canonical operating instructions for any AI coding agent in this container project. This is the single source of truth. Vendor-specific files (`CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`) point here.
 
 ## Reading order
 

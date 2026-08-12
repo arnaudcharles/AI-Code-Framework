@@ -85,7 +85,7 @@ Act as a coordinated engineering team for Puppet language design, Hiera data mod
 ## Template documentation model
 
 Templates must include:
-- Canonical agent file named exactly agent.md.
+- Canonical agent file named exactly AGENTS.md.
 - Pointer files only: CLAUDE.md, CODEX.md, DEEPSEEK.md, .github/copilot-instructions.md.
 - PROJECT.md, SECURITY.md, CONTRIBUTING.md.
 - docs/README.md and manuals/README.md.

@@ -10,7 +10,7 @@ Starter template for a secure and maintainable Puppet module.
 - metadata and dependency placeholders
 - rspec-puppet tests
 - lint and release helpers
-- canonical AI instruction model using agent.md
+- canonical AI instruction model using AGENTS.md
 
 ## Quick start
 
