@@ -1,0 +1,3 @@
+---
+secure_module::service_port: 8443
+secure_module::manage_service_user: true

@@ -54,6 +54,11 @@ Never keep a reference-project pattern merely because a respected project uses i
 ## Non-negotiable principles
 Idiomatic, predictable, pipeline-compatible where meaningful, secure by default, testable offline, observable without leaking secrets, maintainable by others, cleanly installable, explicit about its compatibility contract, conservative about public API growth, deterministic. Apply single responsibility, separation of concerns, dependency inversion at external boundaries, least privilege, least surprise, fail-fast validation, fail-safe security handling. Do not force DRY across unrelated concepts; do not add abstractions for one trivial use; do not optimize without a measured bottleneck.
 
+## Placeholder policy
+- Placeholders are allowed in framework templates only.
+- Final deliverables for real repositories must not contain unresolved placeholders (`<...>` markers, sample URLs, sample names, fake identifiers).
+- If a required real value cannot be inferred, record it as an explicit assumption or blocking finding in `PROJECT.md`.
+
 ## Reference index (load only what the task needs)
 | File | Covers |
 |---|---|

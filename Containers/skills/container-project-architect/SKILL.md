@@ -57,6 +57,12 @@ Act as a coordinated team: container platform architect, secure supply-chain eng
 - Explicit healthchecks and clear startup behavior.
 - Observability without leaking sensitive values.
 
+## Placeholder policy
+
+- Placeholders are allowed only in framework templates.
+- Do not ship unresolved placeholders in final repository deliverables.
+- Replace sample markers and example values with project-specific values, or record a blocking assumption in `PROJECT.md`.
+
 ## Reference index (load only what is needed)
 
 | File | Covers |
@@ -87,6 +93,12 @@ Cross-agent pointers:
 Scaffold-only indexes (create always, fill topic files only with real content):
 - `docs/README.md`
 - `manuals/README.md`
+
+Minimum docs coverage for container projects:
+- container contract (image, env, ports, volumes, healthchecks)
+- build and release flow
+- secret handling and trust boundaries
+- CI checks and local reproduction commands
 
 ## Final response format
 

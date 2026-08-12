@@ -2,18 +2,20 @@
 
 This repository is a framework of reusable project bases for working with Claude and other coding agents without repeating a giant master prompt on every task.
 
-## The three bases
+## The four bases
 
 - [Dev-Project](Dev-Project/README.md) - generic project bootstrap and resume flow for software projects.
 - [PowerShell-Module](PowerShell-Module/README.md) - production-grade PowerShell module engineering.
 - [Containers](Containers/README.md) - container-first projects, Docker/Compose/Swarm guidance, and portable CI specification.
+- [Puppet](Puppet/README.md) - production-grade Puppet module engineering with secure-by-default controls and reusable scaffolding.
 
-The three bases solve different problems:
+The bases solve different problems:
 - `Dev-Project` is the generic bootstrap and resume base for software projects.
 - `PowerShell-Module` is the production-grade base for PowerShell module engineering.
 - `Containers` is the container-first base for Docker, Compose, Swarm, and portable CI.
+- `Puppet` is the production-grade base for Puppet module architecture, data modeling, testing, and release governance.
 
-None of the three is a lower or higher tier in value. They are different tools for different project goals.
+None of these bases is a lower or higher tier in value. They are different tools for different project goals.
 
 Each base follows the same pattern:
 - a thin entry prompt for new work
@@ -49,10 +51,20 @@ Copied there, Claude loads the `SKILL.md` frontmatter and the skill becomes acti
 
 ## Cross-agent model
 
-Each generated project should use one canonical instructions file plus thin pointers for each agent:
+Each generated project should use one canonical instructions file plus thin pointers for each agent.
+
+Default pattern used by Dev-Project, PowerShell-Module, and Containers:
 
 - `AGENTS.md` - canonical source of truth
 - `CLAUDE.md` - Claude pointer to `AGENTS.md`
 - `.github/copilot-instructions.md` - Copilot pointer to `AGENTS.md`
 
-That model keeps the rules single-sourced and easy to resume across conversations and tools.
+Puppet base pattern:
+
+- `agent.md` - canonical source of truth
+- `CLAUDE.md` - pointer to `agent.md`
+- `CODEX.md` - pointer to `agent.md`
+- `DEEPSEEK.md` - pointer to `agent.md`
+- `.github/copilot-instructions.md` - pointer to `agent.md`
+
+Both patterns keep the rules single-sourced and easy to resume across conversations and tools.

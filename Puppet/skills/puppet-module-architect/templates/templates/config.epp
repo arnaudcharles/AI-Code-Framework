@@ -1,0 +1,3 @@
+<%- | Integer $service_port | -%>
+# Managed by Puppet
+service_port=<%= $service_port %>

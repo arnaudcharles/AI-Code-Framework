@@ -7,4 +7,6 @@ Run the skill's resume workflow:
 - Detect the module's established public API and compatibility contract (command names, parameters, output shape, error IDs). Preserve it unless I explicitly authorize a breaking release.
 - Summarize the current state in a few lines: architecture profile in use, version, what is implemented, what is missing.
 - Continue from the last valid point without re-documenting what already exists.
+- Treat this repository as a production target, not as a static template.
+- Replace unresolved placeholders before final delivery (for example `<...>` markers and sample URLs/identifiers).
 - If a change would be breaking, say so explicitly before implementing it.

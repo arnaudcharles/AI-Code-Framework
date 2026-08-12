@@ -1,0 +1,16 @@
+require 'puppetlabs_spec_helper/rake_tasks'
+require 'puppet-lint/tasks/puppet-lint'
+
+PuppetLint.configuration.send('disable_140chars')
+
+desc 'Run metadata validation'
+task :metadata do
+  sh 'bundle exec metadata-json-lint metadata.json'
+end
+
+desc 'Run parser validation'
+task :validate do
+  sh 'bundle exec puppet parser validate manifests/*.pp'
+end
+
+task default: [:metadata, :validate, :lint, :spec]

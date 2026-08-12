@@ -1,0 +1,27 @@
+{
+  "name": "example-secure_module",
+  "version": "0.1.0",
+  "author": "example",
+  "summary": "Secure baseline Puppet module template",
+  "license": "Apache-2.0",
+  "source": "https://example.invalid/example-secure_module",
+  "project_page": "https://example.invalid/example-secure_module",
+  "issues_url": "https://example.invalid/example-secure_module/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": ["11", "12"]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": ["8", "9"]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 7.0.0 < 9.0.0"
+    }
+  ],
+  "dependencies": []
+}
