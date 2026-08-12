@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-The canonical instructions for this repository are in [AGENTS.md](AGENTS.md).
+The canonical instructions for this repository are in [AGENT.md](AGENT.md).
 Read that file first and follow it.
 
 Claude-specific notes:

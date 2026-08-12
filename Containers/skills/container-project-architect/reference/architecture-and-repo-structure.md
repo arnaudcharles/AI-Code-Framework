@@ -21,7 +21,7 @@ Escalate profile only when concrete constraints require it.
 
 ## Required repository baseline
 
-- `AGENTS.md` (canonical instructions)
+- `AGENT.md` (canonical instructions)
 - `PROJECT.md` (live state)
 - `container.md` (container standards and guardrails)
 - `README.md`

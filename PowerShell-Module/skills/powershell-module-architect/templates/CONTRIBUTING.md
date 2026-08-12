@@ -7,7 +7,7 @@
 4. Open a PR against `main`. Public API, security-sensitive, release-pipeline, dependency, and generated-metadata changes require review.
 
 ## Coding standards
-Follow the `powershell-module-architect` skill (naming, manifest, command design, security, testing). See `AGENTS.md`.
+Follow the `powershell-module-architect` skill (naming, manifest, command design, security, testing). See `AGENT.md`.
 
 ## Testing
 - Add or update Pester tests for any behavior change.

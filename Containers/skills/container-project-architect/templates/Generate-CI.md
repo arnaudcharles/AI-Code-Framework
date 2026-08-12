@@ -17,7 +17,7 @@ Use this prompt when:
 ## Operating rule for the AI
 
 Load and follow:
-- `AGENTS.md`
+- `AGENT.md`
 - `PROJECT.md`
 - `container.md`
 - `CI.md`

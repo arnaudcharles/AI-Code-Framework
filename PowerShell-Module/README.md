@@ -37,8 +37,8 @@ Copy `skills/powershell-module-architect/` into:
 To resume an existing module:
 
 > Use the powershell-module-architect skill only if the module needs restructuring.
-> Otherwise resume from AGENTS.md/CLAUDE.md, README.md, CHANGELOG.md, and the current source tree.
+> Otherwise resume from AGENT.md/CLAUDE.md, README.md, CHANGELOG.md, and the current source tree.
 
 # Cross-agent instructions
 
-Generated modules use `AGENTS.md` as the canonical instructions file, with `CLAUDE.md` and `.github/copilot-instructions.md` as thin pointers - same pattern as `Dev-Project`.
+Generated modules use `AGENT.md` as the canonical instructions file, with `CLAUDE.md`, `CODEX.md`, and `.github/copilot-instructions.md` as thin pointers - same pattern as `Dev-Project`.

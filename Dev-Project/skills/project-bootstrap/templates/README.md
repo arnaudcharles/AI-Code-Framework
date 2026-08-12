@@ -2,11 +2,11 @@
 
 This repository uses a documentation structure designed for clarity, maintainability, and safe context switching.
 
-## AGENTS.md
+## AGENT.md
 Canonical operating instructions for every AI agent. Single source of truth.
 
 ## CLAUDE.md / CODEX.md / DEEPSEEK.md / .github/copilot-instructions.md
-Thin, vendor-specific pointers to `AGENTS.md`. They add only agent-specific notes, never duplicate the rules.
+Thin, vendor-specific pointers to `AGENT.md`. They add only agent-specific notes, never duplicate the rules.
 
 ## PROJECT.md
 Living project state: current status, decisions, tasks, blockers, and next steps.

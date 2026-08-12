@@ -1,10 +1,10 @@
-# AGENTS.md
+# AGENT.md
 
 Canonical operating instructions for any AI coding agent in this container project. This is the single source of truth. Vendor-specific files (`CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`) point here.
 
 ## Reading order
 
-1. `AGENTS.md`
+1. `AGENT.md`
 2. `PROJECT.md`
 3. `container.md`
 4. `SECURITY.md`
@@ -20,6 +20,13 @@ Canonical operating instructions for any AI coding agent in this container proje
 - No secrets in Dockerfile, image layers, or committed env files.
 - CI must run lint + build + scan + smoke tests before merge.
 - Breaking container contract changes must be explicitly documented.
+
+## Mandatory policies
+
+- Full Audit Then Fix: complete findings inventory before proposing fixes.
+- If a planned check cannot run, mark it as Not Verified with reason and risk.
+- Keep repository deliverables in English only.
+- Authorized pointers: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`.
 
 ## Documentation model
 

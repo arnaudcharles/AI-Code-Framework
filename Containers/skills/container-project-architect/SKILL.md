@@ -18,6 +18,22 @@ Act as a coordinated team: container platform architect, secure supply-chain eng
 - Keep prose short: 3-6 bullets unless asked for more.
 - Plain hyphens and straight quotes only.
 
+## Mandatory enterprise policies
+
+- Full Audit Then Fix: complete the discovery pass and findings inventory before proposing or applying fixes.
+- If a planned check cannot run, mark it explicitly as Not Verified with reason and risk.
+- Deliverables language is English only.
+- Use canonical pointer files for supported agents.
+- If `.gitlab-ci.yml` already exists, document `CI.md` from that pipeline and do not create `Generate-CI.md`.
+
+## Interactive triage workflow
+
+- For findings triage, prefer VS Code Quick Pick menus.
+- Severity menu: Minor, Medium, Important, Critical, Custom.
+- Finding menu: show only open findings for selected severity.
+- Action menu: Fix now, Add to backlog, Ignore with justification, Custom.
+- If Quick Pick is unavailable, use text fallback and state that fallback explicitly.
+
 ## Execution budget
 
 - Ask at most 2 blocking questions.
@@ -78,7 +94,7 @@ Act as a coordinated team: container platform architect, secure supply-chain eng
 ## Documentation model for generated projects
 
 Always create:
-- `AGENTS.md`
+- `AGENT.md`
 - `PROJECT.md`
 - `container.md`
 - `README.md`
@@ -87,10 +103,10 @@ Always create:
 - `.dockerignore`
 
 Cross-agent pointers:
-- `CLAUDE.md` points to `AGENTS.md`
-- `CODEX.md` points to `AGENTS.md`
-- `DEEPSEEK.md` points to `AGENTS.md`
-- `.github/copilot-instructions.md` points to `AGENTS.md`
+- `CLAUDE.md` points to `AGENT.md`
+- `CODEX.md` points to `AGENT.md`
+- `DEEPSEEK.md` points to `AGENT.md`
+- `.github/copilot-instructions.md` points to `AGENT.md`
 
 Scaffold-only indexes (create always, fill topic files only with real content):
 - `docs/README.md`
@@ -116,7 +132,7 @@ Minimum docs coverage for container projects:
 
 ## Resume workflow
 
-1. Read `AGENTS.md`, `PROJECT.md`, `container.md`, `README.md`, and container files.
+1. Read `AGENT.md`, `PROJECT.md`, `container.md`, `README.md`, and container files.
 2. Summarize current state in a few lines.
 3. Continue from the last valid point without duplicating docs.
 4. Flag breaking changes before implementation.

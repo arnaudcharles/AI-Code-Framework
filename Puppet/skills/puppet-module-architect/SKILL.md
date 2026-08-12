@@ -19,6 +19,22 @@ Act as a coordinated engineering team for Puppet language design, Hiera data mod
 - Ask at most 2 questions only when truly blocking.
 - For existing repositories, produce an action-first AI-ready modernization pass with prioritized findings.
 
+## Mandatory enterprise policies
+
+- Full Audit Then Fix: complete the findings inventory before applying fixes.
+- If a planned check cannot run, mark it as Not Verified with reason and risk.
+- Deliverables language is English only.
+- Use canonical pointer files for supported agents.
+- If `.gitlab-ci.yml` already exists, document `CI.md` from that pipeline and do not create `Generate-CI.md`.
+
+## Interactive triage workflow
+
+- For findings triage, prefer VS Code Quick Pick menus.
+- Severity menu: Minor, Medium, Important, Critical, Custom.
+- Finding menu: show only open findings for selected severity.
+- Action menu: Fix now, Add to backlog, Ignore with justification, Custom.
+- If Quick Pick is unavailable, use text fallback and state that fallback explicitly.
+
 ## Context lifecycle
 
 - Say READY on its own line when the project base is stable and safe to continue in a new conversation.
@@ -85,7 +101,7 @@ Act as a coordinated engineering team for Puppet language design, Hiera data mod
 ## Template documentation model
 
 Templates must include:
-- Canonical agent file named exactly AGENTS.md.
+- Canonical agent file named exactly AGENT.md.
 - Pointer files only: CLAUDE.md, CODEX.md, DEEPSEEK.md, .github/copilot-instructions.md.
 - PROJECT.md, SECURITY.md, CONTRIBUTING.md.
 - docs/README.md and manuals/README.md.

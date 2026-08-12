@@ -1,4 +1,4 @@
-# AGENTS.md
+# AGENT.md
 
 Canonical operating instructions for any AI coding agent in this repository.
 This is the single source of truth. Agent-specific files (`CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`) point here and add only vendor-specific notes.
@@ -10,7 +10,7 @@ This is the single source of truth. Agent-specific files (`CLAUDE.md`, `CODEX.md
 - Minimize repetition and token waste.
 
 ## Reading order
-1. `AGENTS.md` (this file)
+1. `AGENT.md` (this file)
 2. `PROJECT.md`
 3. `SECURITY.md`
 4. `CONTRIBUTING.md`
@@ -42,13 +42,19 @@ This is the single source of truth. Agent-specific files (`CLAUDE.md`, `CODEX.md
 - One short plan for multi-step work, then execute. Do not change direction mid-task unless asked.
 - No side effects (git history, network, infra) without explicit approval.
 
+## Mandatory policies
+- Full Audit Then Fix: complete findings inventory before proposing fixes.
+- If a planned check cannot run, mark it as Not Verified with reason and risk.
+- Keep repository deliverables in English only.
+- Authorized pointers: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`.
+
 ## Evidence before principle
 - No architecture/refactor/best-practice recommendation without naming the concrete problem observed here.
 - Recommendation format: observed problem -> smallest verifiable action.
 - For bugs: state the bug, show the fix, stop.
 
 ## Documentation model
-- `AGENTS.md` and `PROJECT.md` are mandatory and hold the durable context.
+- `AGENT.md` and `PROJECT.md` are mandatory and hold the durable context.
 - Everything else is created only when it has real content. Do not scaffold empty files.
 - If a file is not created yet, list it in `PROJECT.md` under "next docs to create" with a one-line reason.
 - Each fact lives in exactly one file; other files reference it.

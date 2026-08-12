@@ -26,7 +26,7 @@ Production-oriented baseline for container projects with Dockerfile, Compose, CI
 
 ## Documentation map
 
-- `AGENTS.md` for agent operating rules
+- `AGENT.md` for agent operating rules
 - `PROJECT.md` for live status
 - `container.md` for container standards
 - `CI.md` for platform-agnostic CI specification

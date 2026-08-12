@@ -3,7 +3,7 @@
 Audience: developers and AI agents (LLMs).
 Purpose: explain how the project works internally so a contributor or an agent can reason about it.
 
-Do not duplicate stable rules (AGENTS.md), live state (PROJECT.md), security (SECURITY.md), or contribution rules (CONTRIBUTING.md).
+Do not duplicate stable rules (AGENT.md), live state (PROJECT.md), security (SECURITY.md), or contribution rules (CONTRIBUTING.md).
 
 ## Files
 Create each file only when it has real content. Until then, leave it listed here.

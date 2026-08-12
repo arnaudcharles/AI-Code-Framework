@@ -31,4 +31,4 @@ Use `container-project-architect` with your project specification from `Prompt.m
 
 To resume:
 
-Use `Resume-prompt.md`, then continue from `AGENTS.md`, `PROJECT.md`, `container.md`, and the existing container files.
+Use `Resume-prompt.md`, then continue from `AGENT.md`, `PROJECT.md`, `container.md`, and the existing container files.

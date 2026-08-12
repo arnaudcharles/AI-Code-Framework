@@ -2,4 +2,4 @@
 
 Pointer file only.
 
-Read and follow ../AGENTS.md.
+Read and follow ../AGENT.md.

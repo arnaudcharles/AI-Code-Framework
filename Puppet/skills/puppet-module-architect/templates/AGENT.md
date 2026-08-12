@@ -1,10 +1,16 @@
-# AGENTS.md
+# AGENT.md
 
 Canonical operating instructions for any AI coding agent in this Puppet repository.
 
+Authorized pointers in this repository:
+- `CLAUDE.md`
+- `CODEX.md`
+- `DEEPSEEK.md`
+- `.github/copilot-instructions.md`
+
 ## Reading order
 
-1. AGENTS.md
+1. AGENT.md
 2. PROJECT.md
 3. SECURITY.md
 4. CONTRIBUTING.md
@@ -19,6 +25,12 @@ Canonical operating instructions for any AI coding agent in this Puppet reposito
 - Idempotent manifests only.
 - CI must run lint + tests + validation before merge.
 - No breaking interface changes without a major version plan.
+
+## Mandatory policies
+
+- Full Audit Then Fix: complete findings inventory before proposing fixes.
+- If a planned check cannot run, mark it as Not Verified with reason and risk.
+- Keep repository deliverables in English only.
 
 ## Comment verbosity controls
 

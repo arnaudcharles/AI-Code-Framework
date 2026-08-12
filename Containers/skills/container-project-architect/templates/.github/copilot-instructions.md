@@ -1,6 +1,6 @@
 # GitHub Copilot Instructions
 
-Primary operating instructions live in [../AGENTS.md](../AGENTS.md).
+Primary operating instructions live in [../AGENT.md](../AGENT.md).
 Follow that file first.
 
 Copilot-specific notes:

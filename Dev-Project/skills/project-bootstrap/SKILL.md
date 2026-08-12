@@ -46,6 +46,20 @@ The bootstrap and resume prompts are thin routers that defer to this file. Do no
 - Final deliverables for a real repository must not contain unresolved placeholders (`<...>` markers, sample URLs, sample names, fake identifiers).
 - If a required real value is unknown, record it in `PROJECT.md` as an explicit assumption or blocking finding.
 
+## Mandatory enterprise policies
+- Full Audit Then Fix: complete a repository-wide findings inventory before applying fixes.
+- If a planned check cannot run, mark it as Not Verified with reason and risk.
+- Deliverables language is English only.
+- Use canonical pointer files for supported agents.
+- If `.gitlab-ci.yml` already exists, document `CI.md` from that pipeline and do not create `Generate-CI.md`.
+
+## Interactive triage workflow
+- For findings triage, prefer VS Code Quick Pick menus.
+- Severity menu: Minor, Medium, Important, Critical, Custom.
+- Finding menu: show only open findings for selected severity.
+- Action menu: Fix now, Add to backlog, Ignore with justification, Custom.
+- If Quick Pick is unavailable, use text fallback and state that fallback explicitly.
+
 ## Documentation model
 Two files are mandatory and always carry the durable context, so nothing is lost long term:
 - `CLAUDE.md`: stable operating rules, stack, architecture constraints, stable commands, references to the other files.
@@ -67,10 +81,10 @@ Conditional-creation rule (topic files): create an individual topic file (e.g. `
 
 ## Cross-agent instructions
 - Always create the cross-agent pointer set proactively; these are thin files, not filler, so the conditional rule does not apply to them.
-- Use one canonical instructions file, `AGENTS.md`, as the single source of truth for all agents.
-- Vendor files are thin pointers to `AGENTS.md`, not copies: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, and `.github/copilot-instructions.md`.
+- Use one canonical instructions file, `AGENT.md`, as the single source of truth for all agents.
+- Vendor files are thin pointers to `AGENT.md`, not copies: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, and `.github/copilot-instructions.md`.
 - Each pointer may add only a few vendor-specific notes. Never duplicate the rules.
-- See `templates/AGENTS.md`, `templates/CLAUDE.md`, `templates/CODEX.md`, `templates/DEEPSEEK.md`, and `templates/.github/copilot-instructions.md`.
+- See `templates/AGENT.md`, `templates/CLAUDE.md`, `templates/CODEX.md`, `templates/DEEPSEEK.md`, and `templates/.github/copilot-instructions.md`.
 
 ## Authorship rule
 - Never credit the assistant as author, co-author, committer, or pusher. No `Co-authored-by`. No tool attribution in commits, PRs, or metadata unless I explicitly ask.

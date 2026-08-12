@@ -1,4 +1,4 @@
-# AGENTS.md
+# AGENT.md
 
 Canonical operating instructions for any AI coding agent working on this PowerShell module. Single source of truth - vendor-specific files (`CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`) point here and add only vendor-specific notes.
 
@@ -13,6 +13,12 @@ If the skill is available to the agent, load it and its `reference/*.md` files f
 - Every mutating command supports `ShouldProcess`.
 - New code ships with tests; a bug fix ships with a regression test.
 - `build.ps1` (lint, test, build, package) passes before handing off.
+
+## Mandatory policies
+- Full Audit Then Fix: complete findings inventory before proposing fixes.
+- If a planned check cannot run, mark it as Not Verified with reason and risk.
+- Keep repository deliverables in English only.
+- Authorized pointers: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md`.
 
 ## Output contract
 - Code/files first, explanation after and only if non-obvious.

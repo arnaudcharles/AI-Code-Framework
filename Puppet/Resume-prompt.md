@@ -3,9 +3,12 @@ You are resuming an existing Puppet module project.
 Load and follow the puppet-module-architect skill. All operating rules live there. Do not restate them.
 
 Run the Resume workflow now:
-- Read AGENTS.md first, then PROJECT.md, then SECURITY.md and CONTRIBUTING.md.
+- Read AGENT.md first, then PROJECT.md, then SECURITY.md and CONTRIBUTING.md.
 - Read README.md plus relevant docs and manuals.
 - Summarize current state in a few lines.
+- Complete a full findings inventory before proposing fixes. Mark any non-executed check as Not Verified with reason and risk.
+- Keep repository deliverables in English only.
+- If `.gitlab-ci.yml` exists, document `CI.md` from it and do not create `Generate-CI.md`.
 - Continue from the last valid point without rewriting existing documentation unless needed to remove ambiguity or stale guidance.
 - Treat this repository as a production target, not as a static template.
 - Replace all placeholder values before final delivery (for example: <module-name>, <version range>, example.invalid).

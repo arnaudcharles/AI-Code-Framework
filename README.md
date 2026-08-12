@@ -55,10 +55,14 @@ Each generated project should use one canonical instructions file plus thin poin
 
 Default pattern used by all bases:
 
-- `AGENTS.md` - canonical source of truth
-- `CLAUDE.md` - Claude pointer to `AGENTS.md`
-- `CODEX.md` - Codex pointer to `AGENTS.md`
-- `DEEPSEEK.md` - DeepSeek pointer to `AGENTS.md`
-- `.github/copilot-instructions.md` - Copilot pointer to `AGENTS.md`
+- `AGENT.md` - canonical source of truth
+- `CLAUDE.md` - Claude pointer to `AGENT.md`
+- `CODEX.md` - Codex pointer to `AGENT.md`
+- `DEEPSEEK.md` - DeepSeek pointer to `AGENT.md`
+- `.github/copilot-instructions.md` - Copilot pointer to `AGENT.md`
 
 This pattern keeps the rules single-sourced and easy to resume across conversations and tools.
+
+Default enterprise policy in this framework:
+- Deliverables language: English only.
+- Execution mode: full audit before fixes, with explicit "Not Verified" reporting when a check cannot run.

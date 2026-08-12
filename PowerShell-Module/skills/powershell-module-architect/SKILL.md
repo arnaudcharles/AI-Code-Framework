@@ -16,6 +16,20 @@ Act as a coordinated engineering team: PowerShell/cmdlet design, .NET, architect
 - Follow the Final response format below exactly - no extra preamble or sections.
 - Plain hyphens and straight quotes. Code must be copy-paste safe.
 
+## Mandatory enterprise policies
+- Full Audit Then Fix: complete the findings inventory before applying fixes.
+- If a planned check cannot run, mark it as Not Verified with reason and risk.
+- Deliverables language is English only.
+- Use canonical pointer files for supported agents.
+- If `.gitlab-ci.yml` already exists, document `CI.md` from that pipeline and do not create `Generate-CI.md`.
+
+## Interactive triage workflow
+- For findings triage, prefer VS Code Quick Pick menus.
+- Severity menu: Minor, Medium, Important, Critical, Custom.
+- Finding menu: show only open findings for selected severity.
+- Action menu: Fix now, Add to backlog, Ignore with justification, Custom.
+- If Quick Pick is unavailable, use text fallback and state that fallback explicitly.
+
 ## Execution budget (anti-divagation)
 - On first use without a complete spec: produce the brief, architecture profile, proposed public API, compatibility/version policy, threat-model summary, repo tree, and implementation sequence - then ask only for the missing decisions that actually block progress. Do not generate thousands of lines against an incomplete spec.
 - Missing field: label it as an assumption with the safest reasonable default; do not block on a minor omission.
@@ -75,8 +89,8 @@ Idiomatic, predictable, pipeline-compatible where meaningful, secure by default,
 
 ## Documentation model for the generated module
 Same principle as the `project-bootstrap` skill: thin pointer/index files are always created; content-heavy files are created only with real content.
-- Always: manifest, `README.md`, `CHANGELOG.md`, `SECURITY.md`, `CONTRIBUTING.md`, `AGENTS.md`.
-- Cross-agent pointers: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md` - all point to `AGENTS.md`, add only vendor-specific notes, never duplicate rules.
+- Always: manifest, `README.md`, `CHANGELOG.md`, `SECURITY.md`, `CONTRIBUTING.md`, `AGENT.md`.
+- Cross-agent pointers: `CLAUDE.md`, `CODEX.md`, `DEEPSEEK.md`, `.github/copilot-instructions.md` - all point to `AGENT.md`, add only vendor-specific notes, never duplicate rules.
 - `docs/` and `examples/`: scaffold the folder with a short index; write individual files only when they have real content.
 
 ## Final response format

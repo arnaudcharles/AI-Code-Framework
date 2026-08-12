@@ -21,7 +21,7 @@ Same foundation model as the other bases:
 
 ## Canonical multi-agent file
 
-Templates use AGENTS.md as the only canonical instruction source. The following pointer files redirect to it without duplicating rules:
+Templates use AGENT.md as the only canonical instruction source. The following pointer files redirect to it without duplicating rules:
 - CLAUDE.md
 - CODEX.md
 - DEEPSEEK.md

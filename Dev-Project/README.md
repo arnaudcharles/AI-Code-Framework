@@ -51,8 +51,9 @@ If the project needs CI, the template includes the same portable pattern used by
 
 Use one canonical file plus thin pointers for each agent.
 
-- `AGENTS.md` - canonical source of truth
-- `CLAUDE.md` - Claude pointer to `AGENTS.md`
-- `.github/copilot-instructions.md` - Copilot pointer to `AGENTS.md`
+- `AGENT.md` - canonical source of truth
+- `CLAUDE.md` - Claude pointer to `AGENT.md`
+- `CODEX.md` - Codex pointer to `AGENT.md`
+- `.github/copilot-instructions.md` - Copilot pointer to `AGENT.md`
 
-Each agent reads its own file, which redirects to `AGENTS.md`. No rule is duplicated.
+Each agent reads its own file, which redirects to `AGENT.md`. No rule is duplicated.

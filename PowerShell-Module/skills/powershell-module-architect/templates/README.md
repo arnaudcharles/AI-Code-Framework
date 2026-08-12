@@ -3,7 +3,7 @@
 One-sentence description of what this module manages.
 
 ## Supported environments
-PowerShell 7.4+ on Windows, Linux, macOS. See [docs/compatibility.md](docs/compatibility.md) once written, or the compatibility matrix in `AGENTS.md`'s referenced standard.
+PowerShell 7.4+ on Windows, Linux, macOS. See [docs/compatibility.md](docs/compatibility.md) once written, or the compatibility matrix in `AGENT.md`'s referenced standard.
 
 ## Installation
 ```powershell
